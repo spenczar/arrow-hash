@@ -2,9 +2,9 @@
 
 A hacked-out 2-hour prototype to investigate hash tables over arrow arrays.
 
-Lookups are about 6us. 
+Callled from Python, lookups are about 6us.  Table construction is about 250ns per array element (250ms for 1m elements)
 
-Table construction is about 250ns per array element (250ms for 1m elements)
+In comparison, for a plain Python dict, lookups are about 1us, and table construction is about 600ns per element.
 
 ```
 In [1]: import numpy as np; import pyarrow as pa; import arrow_hash
